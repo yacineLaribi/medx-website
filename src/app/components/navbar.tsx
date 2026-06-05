@@ -1,5 +1,4 @@
 "use client";
-import "../globals.css";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,7 +13,7 @@ export default function Navbar() {
   const navItems = useMemo(
     () => [
       { name: "Home", href: "#home", icon: <Home size={16} /> },
-      { name: "AEC", href: "#aec-experience", icon: <Trophy size={16} /> },
+      { name: "MEDX", href: "#aec-experience", icon: <Trophy size={16} /> },
       { name: "Sponsors", href: "#sponsors", icon: <Handshake size={16} /> },
       { name: "FAQ", href: "#FAQ", icon: <MessageCircleQuestion size={16} /> },
       { name: "About Us", href: "#about-us", icon: <Users size={16} /> },
@@ -83,11 +82,11 @@ export default function Navbar() {
                 layoutId="logoGlow"
               />
               <Image
-                src="/aecCH.svg"
-                alt="AEC Logo"
-                width={450}
-                height={120}
-                className="h-12 sm:h-14 w-auto object-contain scale-[1] sm:scale-[1] origin-left transition-all duration-700 ease-out group-hover/logo:scale-[1.2] sm:group-hover/logo:scale-[1.1] group-hover/logo:brightness-110 drop-shadow-[0_12px_45px_rgba(255,255,255,0.35)]"
+                src={activeSection === "#home" || activeSection === "#about-us" || activeSection === "#sponsors" ? "/medx/logo-2.png" : "/medx/logo-1.png"}
+                alt="MEDX Logo"
+                width={400}
+                height={100}
+                className="h-8 w-auto object-contain scale-[1] sm:scale-[1] origin-left transition-all duration-700 ease-out group-hover/logo:scale-[1.2] sm:group-hover/logo:scale-[1.1] group-hover/logo:brightness-110 drop-shadow-[0_12px_45px_rgba(255,255,255,0.35)]"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[200%] group-hover/logo:animate-[shimmer_2s_infinite] pointer-events-none" />
@@ -113,8 +112,8 @@ export default function Navbar() {
                       href={item.href}
                       className={`group relative flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold tracking-tight transition-all duration-300 ${
                         isActive
-                          ? "text-[#1B4D80]"
-                          : "text-[#1B4D80]/50 hover:text-[#1B4D80]"
+                          ? "text-[#00fffb]"
+                          : "text-[#37D4C1] hover:text-[#37D4C1]"
                       }`}
                       onMouseMove={(e) => {
                         const el = e.currentTarget;
@@ -154,10 +153,7 @@ export default function Navbar() {
                           layoutId="activeIndicator"
                           className="absolute -bottom-1 left-4 right-4 h-[2.5px] rounded-full z-10"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                          style={{
-                            background: "linear-gradient(90deg, #1B4D80, #EB8317)",
-                            boxShadow: "0 2px 10px rgba(27,77,128,0.1), 0 1px 12px rgba(235, 131, 23, 0.35)",
-                          }}
+
                         />
                       )}
                     </Link>
@@ -172,7 +168,7 @@ export default function Navbar() {
             
             {/* MOBILE MENU BUTTON */}
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-[#1B4D80]/10"
+              className="lg:hidden p-2 rounded-lg hover:bg-[#37D4C1]/10"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -181,7 +177,7 @@ export default function Navbar() {
             {/* REGISTER BUTTON */}
             <Link
               href="/register"
-              className=" lg:block border border-[#eb851728] rounded-full px-5 py-2 text-sm font-semibold text-white bg-[#1B4D80] hover:bg-[#163e66] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
+              className=" lg:block border border-[#eb851728] rounded-full px-5 py-2 text-sm font-semibold text-white bg-[#088395] hover:bg-[#163e66] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
             >
               Register
             </Link>
@@ -195,7 +191,7 @@ export default function Navbar() {
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
         }`}
       >
-        <div className="rounded-2xl border bg-white/90 backdrop-blur-xl p-3 shadow-xl border-[#1B4D80]/10">
+        <div className="rounded-2xl border bg-white/90 backdrop-blur-xl p-3 shadow-xl border-[#37D4C1]/10">
           <nav className="flex flex-col gap-2">
             {navItems.map((item) => {
               const isActive = activeSection === item.href;
@@ -207,8 +203,8 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl transition ${
                     isActive
-                      ? "bg-[#1B4D80]/10 text-[#1B4D80]"
-                      : "text-[#1B4D80]/70 hover:bg-[#1B4D80]/5"
+                      ? "bg-[#37D4C1]/10 text-[#37D4C1]"
+                      : "text-[#37D4C1]/70 hover:bg-[#37D4C1]/5"
                   }`}
                 >
                   {item.icon}

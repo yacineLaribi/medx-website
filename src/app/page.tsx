@@ -4,7 +4,6 @@ import Bottom from "./components/bottom";
 import ErrorBoundary from "./components/error";
 import FAQ from "./components/faq";
 import Navbar from "./components/navbar";
-import "./globals.css";
 import Fisrt from "./components/home";
 import Aec from "./components/Aec";
 import LogoLoop from "./components/LogoLoop";
@@ -27,7 +26,7 @@ export default function Home() {
         <div
           id="sponsors"
           className="relative z-30 flex flex-col items-center w-full py-8 md:py-14"
-          style={{ background: "#1B4D80" }}
+          style={{ background: "#071952" }}
         >
           {/* Decorative top line */}
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#F3C623] to-transparent opacity-30"></div>
@@ -83,7 +82,7 @@ export default function Home() {
 
         <div
           className="relative z-30 flex flex-col items-center w-full py-8 md:py-14"
-          style={{ background: "#1B4D80" }}
+          style={{ background: "#071952" }}
         >
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#F3C623] to-transparent opacity-30 "></div>
 

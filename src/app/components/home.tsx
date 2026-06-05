@@ -2,25 +2,38 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import OceanSurface from "./OceanSurface";
 import Timer from "./timer";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden font-sans">
-   
-      <div className="absolute inset-0 z-0">
-        <OceanSurface />
-      </div>
+    <section className="relative w-full min-h-screen bg-[#071952] flex items-center justify-center text-white overflow-hidden font-sans">
 
       {/* Subtle Grid */}
-      {/* <div className="absolute inset-0 opacity-10 z-0">
+       <div className="absolute inset-0 opacity-10 z-0">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(186,215,233,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(186,215,233,0.2)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      </div> */}
+      </div> 
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl px-6 flex flex-col items-center">
+
+        {/* Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mt-8 flex justify-center"
+        >
+          <Image
+            src="/medx/logo-2.png"
+            alt="MEDX Logo"
+            width={600}
+            height={600}
+            priority
+            className="h-auto drop-shadow-[0_8px_16px_rgba(27,77,128,0.4)]"
+          />
+        </motion.div>
         {/* Title - always centered */}
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
@@ -28,10 +41,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="text-3xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight bg-gradient-to-br from-[#F4F6FF] to-[#BAD7E9] bg-clip-text text-transparent drop-shadow-[0_4px_2px_rgba(27,77,128,0.6)] text-center w-[95vw] md:w-full max-w-[140%] mt-10"
         >
-          From North to South, East to West,
-          <br />
-          <span className="block mt-1">one winning team</span>
+          Where Students Become Doctors .
         </motion.h1>
+
 
         {/* Outlined background text */}
         <div>
@@ -52,7 +64,7 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              AEC 2026
+              MEDX2026
             </span>
           </motion.div>
           
@@ -73,32 +85,11 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              AEC 2026
+              MEDX2026
             </span>
           </motion.div>
         </div>
 
-        {/* Glass Card */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="mt-0 sm:mt-8 backdrop-blur-xl bg-[#1B4D80]/20 border border-[#BAD7E9]/20 rounded-2xl px-3 py-3 sm:py-4 sm:px-5 flex flex-row items-center gap-6 shadow-[0_10px_40px_rgba(16,55,92,0.5)]"
-        >
-          <div className="text-center sm:text-left">
-            <p className="text-sm text-[#BAD7E9]/70">Date</p>
-            <p className="font-semibold text-[#F4F6FF]">Stay Tuned!</p>
-          </div>
-
-          <div className=" sm:block w-px h-8 bg-[#BAD7E9]/20"></div>
-
-          <div className="text-center sm:text-left">
-            <p className="text-sm text-[#BAD7E9]/70">Location</p>
-            <p className="font-semibold text-[#F4F6FF]">
-              Nationwide • 4 Wilaya
-            </p>
-          </div>
-        </motion.div>
 
         {/* Dynamic Countdown Timer */}
         <motion.div
@@ -107,7 +98,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="w-full flex justify-center"
         >
-          <Timer targetDate="2026-04-04T00:00:00" />
+          <Timer targetDate="2026-07-10T14:00:00" />
         </motion.div>
 
         {/* CTA */}
@@ -120,9 +111,8 @@ export default function Hero() {
             href="/register"
             className="
               mt-10 inline-flex items-center gap-2 px-8 py-3 rounded-full
-              bg-[#10375C] text-[#F4F6FF] font-semibold text-lg
-              shadow-[0_0_20px_rgba(27,77,128,0.6)]
-              hover:bg-[#1B4D80]
+              bg-[#088395] text-[#F4F6FF] font-semibold text-lg
+              hover:bg-[#071952]
               hover:shadow-[0_0_40px_rgba(27,77,128,0.9)]
               hover:scale-105
               transition-all duration-300

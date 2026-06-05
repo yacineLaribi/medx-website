@@ -1,5 +1,4 @@
 "use client";
-import "../globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
@@ -35,11 +34,11 @@ export default function Nav() {
                 layoutId="logoGlow"
               />
             <Image
-  src="/aecWH.svg"
-  alt="AEC Logo"
-  width={450}
-  height={120}
-  className="h-12 sm:h-14 w-auto object-contain scale-[1.6] sm:scale-[2] origin-left transition-all duration-700 ease-out group-hover/logo:scale-[1.7] sm:group-hover/logo:scale-[2.1] group-hover/logo:brightness-110 drop-shadow-[0_2px_4px_rgba(255,255,255,0.15)] drop-shadow-[0_8px_20px_rgba(255,255,255,0.25)] drop-shadow-[0_20px_60px_rgba(255,255,255,0.12)]"
+  src="/medx/logo-2.png"
+  alt="MEDX Logo"
+  width={400}
+  height={100}
+  className="h-4 w-auto object-contain scale-[1.6] sm:scale-[2] origin-left transition-all duration-700 ease-out group-hover/logo:scale-[1.7] sm:group-hover/logo:scale-[2.1] group-hover/logo:brightness-110 drop-shadow-[0_2px_4px_rgba(255,255,255,0.15)] drop-shadow-[0_8px_20px_rgba(255,255,255,0.25)] drop-shadow-[0_20px_60px_rgba(255,255,255,0.12)]"
   priority
 />
             </div>

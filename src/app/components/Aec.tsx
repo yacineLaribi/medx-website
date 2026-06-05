@@ -1,4 +1,3 @@
-import "../globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
@@ -27,10 +26,12 @@ function Counter({ value }: { value: number }) {
 }
 
 const cities = [
-  { id: "algiers", name: "Algiers", x: "53%", y: "8%", logo: "/viclogo.png", club: "Visionary Innovation Club", place: "National School Polytechnic of Algiers", insta: "https://www.instagram.com/vic.enp/" },
-  { id: "oran", name: "Oran", x: "40%", y: "16%", logo: "/volta.png", club: "", place: "Higher School of Electrical and Energy Engineering of Oran", insta: "https://www.instagram.com/voltatec/" },
-  { id: "constantine", name: "Constantine", x: "65%", y: "13%", logo: "/skybridge.png", club: "Skybridge Club", place: "National School Polytechnic of Constantine", insta: "https://www.instagram.com/skybridge.club/" },
-  { id: "ouargla", name: "Ouargla", x: "61%", y: "38%", logo: "/SCO.PNG", club: "Scientific Corner Ouargla", place: "University of Ouargla", insta: "https://www.instagram.com/scientific_corner/" },
+  { id: "oran", name: "ORAN", x: "45%", y: "5%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
+  { id: "tlemcen", name: "TLEMCEN", x: "35%", y: "15%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
+  { id: "alger", name: "ALG", x: "52%", y: "3%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
+  { id: "ouarguela", name: "OURG", x: "60%", y: "35%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
+  { id: "constantine", name: "CONST", x: "64%", y: "4%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
+  { id: "adrar", name: "ADRAR", x: "40%", y: "52%", logo: "/medx/icon.png", club: "Zenith Club", place: "Faculty of medicine ORAN", insta: "https://www.instagram.com/zenith.med.club/" },
 ];
 
 type City = {
@@ -88,16 +89,16 @@ export default function Aec() {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
   return (
-    <div id="aec-experience" className="w-full flex flex-col items-center">
+    <div id="aec-experience" className="w-full bg-[#071952] flex flex-col items-center">
       {/* Subtle radial glow behind this section */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#BAD7E9]/[0.06] blur-[120px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#071952] blur-[120px]"></div>
       </div>
       <div className="absolute inset-0 pointer-events-none z-0 opacity-[0.06]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
             <pattern id="faq-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1B4D80" strokeWidth="1" />
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#071952" strokeWidth="1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#faq-grid)" />
@@ -113,7 +114,7 @@ export default function Aec() {
         className="relative w-full max-w-6xl mx-auto px-6 py-28 overflow-hidden"
       >
         {/* 🔷 BACKGROUND GRID */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(27,77,128,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(27,77,128,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(7,25,82,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(7,25,82,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
         {/* 🔥 ENERGY CORE */}
         <motion.div
@@ -136,12 +137,12 @@ export default function Aec() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <span className="text-xs tracking-[0.25em] text-[#EB8317] uppercase">
+            <span className="text-xs tracking-[0.25em] text-[#37B7C3] uppercase">
               About the Competition
             </span>
 
-            <h2 className="aec text-4xl md:text-5xl font-bold bg-gradient-to-br from-[#F4F6FF] to-[#BAD7E9] bg-clip-text text-transparent drop-shadow-[0_4px_2px_rgba(27,77,128,0.6)] mb-4">
-              WHAT IS AEC
+            <h2 className="aec text-4xl md:text-5xl font-bold bg-gradient-to-br from-[#F4F6FF] to-[#BAD7E9] bg-clip-text text-transparent drop-shadow-[0_4px_2px_rgba(7,25,82,0.6)] mb-4">
+              WHAT IS MEDX 
             </h2>
 
             {/* 🧠 PROGRESSIVE TEXT */}
@@ -157,22 +158,27 @@ export default function Aec() {
               }}
             >
               {[
-                "The Algerian Engineering Competition (AEC) is a ",
-                "national engineering event ",
-                "where participants tackle  ",
-                "real-world challenges",
-                "proposed by industry and guided by experts. ",
-                "Open to students, startups, graduates, and researchers, ",
-                "AEC",
-                "connects Algerian talent with industrial needs, ",
-                "fostering ",
+                "MEDX is a ",
+                "national medical surgical competition ",
+                "and the main activity in the ",
+                "summer university",
+                " of ",
+                "University of Oran 1 Ahmed Ben Bella",
+                ". Hosted at the ",
+                "Faculty of Medicine Oran",
+                ", it features challenging competitions including ",
+                "CLINIX",
+                " for clinical reasoning, ",
+                "SURGIX",
+                " for surgical practice challenges, and the ",
+                "WAHRAN GAME",
+                " cultural and historical challenge. Participants tackle ",
+                "real-world medical scenarios",
+                " and engaging activities across multiple venues in the beautiful city of ",
+                "Oran",
+                ", showcasing their skills, knowledge, and ",
                 "innovation",
-                " and practical ",
-                "problem-solving.",
-                " Previous editions have brought together participants from across ",
-                "the country",
-                " and the diaspora, offering a platform to showcase skills, creativity, and impact",
-                ".",
+                " in medical science.",
               ].map((word, i) => (
                 <motion.span
                   key={i}
@@ -185,8 +191,8 @@ export default function Aec() {
                     ease: [0.21, 0.47, 0.32, 0.98]
                   }}
                   className={
-                    ["national engineering event ", "real-world challenges", "AEC", "innovation", "problem-solving.", "the country"].includes(word)
-                      ? "mx-1 px-1 rounded bg-gradient-to-r from-[#EB8317] to-[#F3C623] text-white inline-block"
+                    ["national medical surgical competition ", "summer university", "University of Oran 1 Ahmed Ben Bella", "Faculty of Medicine Oran", "CLINIX", "SURGIX", "WAHRAN GAME", "real-world medical scenarios", "Oran", "innovation"].includes(word)
+                      ? "mx-1 px-1 rounded bg-[#37B7C3] text-white inline-block"
                       : ""
                   }
                 >
@@ -197,11 +203,11 @@ export default function Aec() {
 
             {/* TAGS */}
             <div className="flex flex-wrap gap-3">
-              {["Innovation", "Teamwork", "National Impact", "Real Problems"].map(
+              {["CLINIX", "SURGIX", "WAHRAN GAME", "SUMMER UNIVERSITY"].map(
                 (tag) => (
                   <span
                     key={tag}
-                    className="px-4 py-2 rounded-full text-xs font-medium tracking-wide border border-[#1B4D80]/10 bg-white/60 text-[#1B4D80] hover:border-[#EB8317] hover:text-[#EB8317] transition"
+                    className="px-4 py-2 rounded-full text-xs font-medium tracking-wide border border-[#071952]/10 bg-white/60 text-[#071952] hover:border-[#37B7C3] hover:text-[#37B7C3] transition"
                   >
                     {tag}
                   </span>
@@ -224,10 +230,10 @@ export default function Aec() {
             />
 
             {[
-              { number: 100, suffix: "+", label: "Teams", desc: "Solving challenges", accent: "#EB8317" },
-              { number: 400, suffix: "+", label: "Participants", desc: "Top tech talents", accent: "#F3C623" },
+              { number: 25, suffix: "+", label: "Teams", desc: "Solving challenges", accent: "#EB8317" },
+              { number: 200, suffix: "+", label: "Participants", desc: "Top medical talents", accent: "#BAD7E9" },
               { number: 69, suffix: "", label: "Wilayas", desc: "National reach", accent: "#BAD7E9" },
-              { number: 5, suffix: "", label: "Editions", desc: "Years of success", accent: "#EB8317" },
+              { number: 6, suffix: "", label: "Days", desc: "To choose one winner", accent: "#EB8317" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -235,9 +241,9 @@ export default function Aec() {
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="group relative flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(27,77,128,0.4)]"
+                className="group relative flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(7,25,82,0.4)]"
                 style={{
-                  background: "linear-gradient(135deg, rgba(16,55,92,0.6) 0%, rgba(27,77,128,0.3) 100%)",
+                  background: "linear-gradient(135deg, rgba(7,25,82,0.6) 0%, rgba(7,25,82,0.3) 100%)",
                   border: "1px solid rgba(186,215,233,0.1)",
                   boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
                 }}
@@ -277,7 +283,7 @@ export default function Aec() {
         style={{ background: "#F4F6FF" }}
       >
         {/* 🔷 GRID OVERLAY */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(27,77,128,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(27,77,128,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(7,25,82,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(7,25,82,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
         {/* CONTENT WRAPPER */}
         <div className="relative z-10 max-w-6xl mx-auto text-center px-4 mb-15">
@@ -287,36 +293,39 @@ export default function Aec() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs tracking-[0.25em] text-[#EB8317] uppercase">
-              Where We Compete
+            <span className="text-xs tracking-[0.25em] text-[#088395] uppercase">
+              Competition Venues
             </span>
-            <h2 className="text-4xl font-bold text-[#1B4D80] mb-6 mt-3">
-              NATIONAL NETWORK
+            <h2 className="text-4xl font-bold text-[#071952] mb-6 mt-3">
+              Multiple Locations Across Oran
             </h2>
+            <p className="text-[#071952]/70 max-w-2xl mx-auto">
+              MEDX competitions take place at the Faculty of Medicine Oran and various venues throughout the beautiful city, featuring challenges designed to test medical knowledge and surgical expertise.
+            </p>
           </motion.div>
         </div>
 
         {/* 🟢 MAP & NODES SYNCRONIZED CONTAINER */}
-        <div className="relative w-[750px] sm:w-[800px] md:w-[900px] aspect-[4/3] left-1/2 transform -translate-x-[53%] sm:-translate-x-[54%] md:-translate-x-1/2 -mt-16 md:-mt-10">
+        <div className="relative w-[900px]  aspect-[4/3] left-1/2 transform -translate-x-[50%] sm:-translate-x-[50%] md:-translate-x-1/2 -mt-16 md:-mt-10">
 
           {/* 🔵 BACKGROUND MAP */}
           <img
             src="/alg.svg"
             alt="Algeria map"
-            className="absolute inset-0 w-full h-full object-fill block pointer-events-none opacity-40 md:opacity-45"
+            className="absolute  w-full h-full object-fill block pointer-events-none opacity-40 md:opacity-45"
             style={{ filter: "brightness(0)", WebkitFilter: "brightness(0)", transform: "translateZ(0)" }}
           />
 
           {/* 🔥 CONNECTION LINES */}
           <svg
             ref={svgRef}
-            className="absolute inset-0 w-full h-full pointer-events-none z-10"
+            className="absolute mt-10 ml-8 w-full h-full pointer-events-none z-10"
           >
             <defs>
               <linearGradient id="trackGradient" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#1B4D80" stopOpacity="0.6" />
+                <stop offset="0%" stopColor="#071952" stopOpacity="0.6" />
                 <stop offset="50%" stopColor="#BAD7E9" stopOpacity="1" />
-                <stop offset="100%" stopColor="#1B4D80" stopOpacity="1" />
+                <stop offset="100%" stopColor="#071952" stopOpacity="1" />
               </linearGradient>
 
               <filter id="glow">
@@ -332,6 +341,10 @@ export default function Aec() {
               { target: 2, delay: 0 },
               { target: 1, delay: 0.15 },
               { target: 3, delay: 0.3 },
+              { target: 4, delay: 0.2 },
+              { target: 5, delay: 0.1 },
+
+
             ].map((conn, idx) => {
               const from = cities[conn.target];
               const to = cities[0];
@@ -341,8 +354,10 @@ export default function Aec() {
               // Neural bundle of fibers
               const filaments = [
                 { curve: 0.8, opacity: 0.1, width: 1, delay: 0 },
-                { curve: 1.0, opacity: 0.25, width: 2, delay: 0.05 },
+                { curve: 1.0, opacity: 0.25, width: 1, delay: 0.05 },
                 { curve: 1.2, opacity: 0.1, width: 1, delay: 0.1 },
+                { curve: 1.4, opacity: 0.1, width: 1, delay: 0.15 },
+
               ];
 
               return (
@@ -371,7 +386,7 @@ export default function Aec() {
                         {fIdx === 1 && (
                           <motion.path
                             d={path}
-                            stroke="#1B4D80"
+                            stroke="#071952"
                             strokeWidth="3"
                             fill="none"
                             strokeLinecap="round"
@@ -409,36 +424,33 @@ export default function Aec() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 + i * 0.1 }}
             >
-              {/* GLOW PULSE */}
-              <div className="absolute z-0 w-24 h-24 rounded-full bg-[#EB8317]/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500 animate-pulse pointer-events-none"></div>
-
               {/* NODE */}
               <motion.div
                 whileHover={{ scale: 1.12 }}
-                className="relative z-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white flex items-center justify-center shadow-[0_8px_24px_rgba(27,77,128,0.15)] border border-[#1B4D80]/10 transition-all duration-500 group-hover:shadow-[0_12px_32px_rgba(235,131,23,0.25)] group-hover:border-[#EB8317]/30"
+                className="relative z-0 w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-[0_8px_24px_rgba(7,25,82,0.15)] border border-[#071952]/10 transition-all duration-500  group-hover:border-[#c817eb]"
               >
                 <img
                   src={city.logo}
                   alt={city.name}
-                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
+                  className="w-8 h-8 md:w-14 md:h-14 object-contain"
                 />
               </motion.div>
 
               {/* LABEL */}
-              <span className="mt-3 text-xs md:text-sm font-bold tracking-widest text-[#10375C] group-hover:text-[#EB8317] transition bg-white/50 backdrop-blur-md px-2 py-1 rounded-md">
+              <span className=" text-xs font-bold tracking-widest text-[#071952] group-hover:text-[#c817eb] transition bg-white/50 backdrop-blur-md px-2 py-1 rounded-md">
                 {city.name}
               </span>
 
               {/* HOVER DETAILS CARD */}
-              <div className="absolute top-full mt-2 md:mt-3 w-[200px] bg-white/95 backdrop-blur-2xl border border-[#1B4D80]/10 shadow-[0_20px_50px_rgba(27,77,128,0.25)] rounded-2xl p-4 opacity-0 translate-y-3 pointer-events-none transition-all duration-[400ms] group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:translate-y-0 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto z-50 text-left">
+              <div className="absolute top-full mt-2 md:mt-3 w-[200px] bg-white/95 backdrop-blur-2xl border border-[#071952]/10 shadow-[0_20px_50px_rgba(7,25,82,0.25)] rounded-2xl p-4 opacity-0 translate-y-3 pointer-events-none transition-all duration-[400ms] group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:translate-y-0 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto z-50 text-left">
                 {/* Little triangle arrow pointing up */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white/95 border-t border-l border-[#1B4D80]/10 rotate-45 backdrop-blur-2xl"></div>
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white/95 border-t border-l border-[#071952]/10 rotate-45 backdrop-blur-2xl"></div>
 
                 <div className="relative z-30">
-                  <h4 className="text-[13px] font-black text-[#1B4D80] mb-2 uppercase tracking-wide">{city.club}</h4>
+                  <h4 className="text-[13px] font-black text-[#071952] mb-2 uppercase tracking-wide">{city.club}</h4>
                   <div className="flex items-start gap-1.5 mb-4">
-                    <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-[#EB8317] mt-0.5" />
-                    <p className="text-[10px] sm:text-[11px] font-semibold text-[#10375C]/70 leading-snug">
+                    <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-[#cb17eb] mt-0.5" />
+                    <p className="text-[10px] sm:text-[11px] font-semibold text-[#071952]/70 leading-snug">
                       {city.place}
                     </p>
                   </div>
@@ -474,7 +486,7 @@ export default function Aec() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className="relative mx-auto max-w-7xl rounded-[32px] border border-white/10 overflow-hidden bg-[#1B4D80]"
+          className="relative mx-auto max-w-7xl rounded-[32px] border border-white/10 overflow-hidden bg-[#071952]"
           style={{
             // background:
             //   "radial-gradient(circle at top left, rgba(186,215,233,0.12), transparent 45%), linear-gradient(135deg, rgba(27,77,128,0.55), rgba(16,55,92,0.85))",
@@ -488,18 +500,17 @@ export default function Aec() {
             {/* LEFT CONTENT */}
             <div className="text-white space-y-6">
               <p className="text-xs md:text-sm tracking-[0.35em] text-[#BAD7E9]/70 uppercase">
-                AEC GALLERY
+                CLINIX HIGHLIGHTS
               </p>
 
               <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                Relive AEC <br /> Moments
+                Explore CLINIX <br /> Excellence
               </h2>
 
               <div className="w-16 h-[2px] bg-gradient-to-r from-[#EB8317] to-[#F3C623]" />
 
               <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-md">
-                Explore highlights from past editions of the Algerian Engineering Competition,
-                where innovation, engineering, and creativity meet in one place.
+                Explore the highlights from CLINIX, the clinical reasoning competition now in its third edition. Watch medical professionals and students showcase their diagnostic skills, critical thinking, and clinical expertise at the Faculty of Medicine Oran.
               </p>
 
               <Link
@@ -507,7 +518,7 @@ export default function Aec() {
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-300"
                 style={{
                   background: "linear-gradient(135deg, #EB8317, #F3C623)",
-                  color: "#10375C",
+                  color: "#071952",
                 }}
               >
                 REGISTER NOW

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Geist } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import OceanBackground from "./components/OceanBackground";
 import ErrorBoundary from "./components/error";
 import GlobalSplashScreen from "./components/GlobalSplashScreen";
 import { cn } from "@/lib/utils";
@@ -20,8 +18,8 @@ const raleway = Raleway({
 
 // Metadata with favicon
 export const metadata: Metadata = {
-  title: "Algerian Engineering Competition",
-  description: "Algeria's #1 Engineering Competition",
+  title: "MEDX by Zenith Club",
+  description: "Algeria's Biggest Medical Surgical Competition",
   icons: {
     icon: "/aecWV.svg",
   },
@@ -38,7 +36,6 @@ export default function RootLayout({
         <ErrorBoundary>
           
           <Analytics />
-          <OceanBackground />
         </ErrorBoundary>
         {children}
         <Toaster position="top-center" />
