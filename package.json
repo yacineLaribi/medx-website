@@ -13,8 +13,6 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "@studio-freight/lenis": "^1.0.42",
-    "@supabase/supabase-js": "^2.99.2",
-    "@tanstack/react-table": "^8.21.3",
     "@types/three": "^0.183.1",
     "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
