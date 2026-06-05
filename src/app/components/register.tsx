@@ -2,7 +2,6 @@
 'use client';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { getSupabaseClient, missingSupabaseEnvMessage } from '../lib/supabaseClient';
 
 const wilayas = [
   'Alger',
@@ -270,46 +269,20 @@ const Reg = () => {
       return;
     }
 
-    const supabase = getSupabaseClient() as any;
-    if (!supabase) {
-      toast.error(missingSupabaseEnvMessage);
-      return;
-    }
-
     setLoading(true);
     toast.loading('Submitting...');
     try {
-      // Insert team
-      const { data: teamData, error: teamError } = await supabase
-        .from('teams')
-        .insert({
-          ...team,
-          num_members: team.num_members,
-          different_universities: team.different_universities === 'Yes',
-          can_attend_physically: team.can_attend_physically === 'Yes',
-          participated_before: team.participated_before === 'Yes',
-          hands_on_experience: team.hands_on_experience === 'Yes',
-        })
-        .select()
-        .single();
-      if (teamError || !teamData) throw new Error(teamError?.message || 'Team insert failed');
-      const team_id = teamData.id;
-      // Insert leader
-      const { error: leaderError } = await supabase.from('members').insert({
-        ...leader,
-        is_leader: true,
-        team_id,
-      });
-      if (leaderError) throw new Error(leaderError.message);
-      // Insert members
-      for (const m of members) {
-        const { error: memberError } = await supabase.from('members').insert({
-          ...m,
-          is_leader: false,
-          team_id,
-        });
-        if (memberError) throw new Error(memberError.message);
-      }
+      // Google Sheets API integration will be added here
+      // TODO: Send form data to Google Sheets via API
+      const payload = {
+        team,
+        leader,
+        members,
+      };
+      
+      // Placeholder for Google Sheets API call
+      console.log('Form data to be submitted:', payload);
+      
       toast.dismiss();
       toast.success('Registration successful!');
       setStep(5);
