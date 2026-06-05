@@ -29,9 +29,9 @@ export default function Home() {
           style={{ background: "#071952" }}
         >
           {/* Decorative top line */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#F3C623] to-transparent opacity-30"></div>
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#088395] to-transparent opacity-30"></div>
 
-          <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-[#EB8317] mb-3">
+          <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-[#088395] mb-3">
             Proudly Supported By
           </span>
           <h2

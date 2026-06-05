@@ -6,10 +6,10 @@ import "../globals.css";
 
 export default function FAQ() {
   const questions = [
-    { question: "How many problems will we be working on?", answer: "Three problem statements will be proposed, and each team will be assigned one to work on." },
-    { question: "Does the team need to stay overnight during the competition?", answer: "Yes, it's a hackathon that requires participants to stay overnight. However, only 2 out of the 4 team members are allowed to leave at night and return in the morning." },
-    { question: "Do all team members need to fill out the registration?", answer: "No, only the team leader must register on behalf of the entire team." },
-    { question: "Should all team members be from the same field or specialty?", answer: "Not at all. Team versatility is encouraged, and various skills are needed, including flexible prototyping, hands-on work, strong programming knowledge, critical thinking, robotics development, 3D printing, and experimental modeling." },
+    { question: "What challenges will be featured at MEDX?", answer: "There are 3 main challenges: Clinix (Clinical Reasoning Challenge), Surgix (Surgical Practical Challenge), and Wahran Game (Cultural Historical Challenge), alongside a lot of fun activities!" },
+    { question: "What is the duration of the event?", answer: "MEDX is a 5-day event running from July 11th to July 15th." },
+    { question: "Will there be accommodation and catering?", answer: "Yes, everything is on us! Accommodation and meals are fully covered. The only expense you need to pay is your transportation. Once you arrive, everything else is provided." },
+    { question: "How many teams are participating?", answer: "We have 25 teams from all faculties with almost 200 participants in total!" },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -48,7 +48,7 @@ export default function FAQ() {
           viewport={{ once: true, amount: 0.8 }}
           className="text-center space-y-3"
         >
-          <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-[#EB8317]">
+          <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-[#088395]">
             Got Questions?
           </span>
           <h1 className="aec text-4xl md:text-5xl lg:text-6xl text-[#1B4D80] uppercase tracking-wide">
@@ -57,7 +57,7 @@ export default function FAQ() {
           <p className="text-[#10375C]/50 text-sm sm:text-base tracking-[0.15em] uppercase font-medium">
             Frequently Asked Questions
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#1B4D80] via-[#EB8317] to-[#1B4D80] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-[#1B4D80] via-[#088395] to-[#1B4D80] mx-auto mt-4 rounded-full"></div>
         </motion.div>
 
         <div className="w-[90%] sm:w-[85%] md:w-3/4 lg:w-[70%] max-w-4xl space-y-4">
@@ -161,7 +161,7 @@ export default function FAQ() {
 
                     <div className="min-w-0 flex-1">
                       <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-white/55 tech-accent mb-0.5 sm:mb-1">
-                        Q{String(index + 1).padStart(2, '0')} • AEC 
+                        Q{String(index + 1).padStart(2, '0')} • MEDX 
                       </p>
                       <span className={`text-[25px] text-xs font-semibold leading-snug sm:leading-normal tracking-[0.01em] transition-colors duration-300 pointer-events-none select-none pr-1 sm:pr-2 drop-shadow-md ${isOpen ? 'text-white' : 'text-[#e6f7ff]/95'}`}>
                         {item.question}

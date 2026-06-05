@@ -507,7 +507,7 @@ export default function Aec() {
                 Explore CLINIX <br /> Excellence
               </h2>
 
-              <div className="w-16 h-[2px] bg-gradient-to-r from-[#EB8317] to-[#F3C623]" />
+              <div className="w-16 h-[2px] bg-[#088395]" />
 
               <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-md">
                 Explore the highlights from CLINIX, the clinical reasoning competition now in its third edition. Watch medical professionals and students showcase their diagnostic skills, critical thinking, and clinical expertise at the Faculty of Medicine Oran.
@@ -517,8 +517,8 @@ export default function Aec() {
                 href="/register"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-300"
                 style={{
-                  background: "linear-gradient(135deg, #EB8317, #F3C623)",
-                  color: "#071952",
+                  background: "#088395",
+                  color: "#ffffff",
                 }}
               >
                 REGISTER NOW
